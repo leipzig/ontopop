@@ -79,5 +79,6 @@ with open("ncbo_citations.json") as file:
     data = json.load(file)
     with open("ncbo_citations.csv", "w") as file:
         csv_file = csv.writer(file)
+        csv_file.writerow(['Ontology','count'])
         for item in data.keys():
             csv_file.writerow([item,data[item]])
